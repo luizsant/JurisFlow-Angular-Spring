@@ -1,0 +1,75 @@
+/* header.component.css */
+.header {
+  position: fixed; /* Fixa o cabeçalho no topo */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Um valor alto para o z-index para ficar acima dos outros elementos */
+  background: linear-gradient(
+    90deg,
+    rgba(5, 101, 120, 1) 0%,
+    rgba(44, 62, 80, 1) 28%,
+    rgba(44, 62, 80, 1) 100%
+  );
+
+  color: white;
+  padding: 0 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding: 15px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #e7fa95;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-left: 40px;
+  border: solid 1px white;
+  padding: 15px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.logo span {
+  color: #aa9c49;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-left: 40px;
+  margin-right: 40px;
+  padding: 10px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease, background-color 0.3s ease,
+    border-radius 0.3s ease, padding 0.3s ease;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+.nav-item a:hover {
+  color: #e7fa95;
+  background-color: #3c6d9e;
+  border-radius: 5px;
+  padding: 12px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .nav-list {
+    display: none; /* Esconde a lista de navegação em telas menores */
+  }
+
+  /* Estilos para o ícone de hambúrguer e menu expandido podem ser adicionados aqui */
+}

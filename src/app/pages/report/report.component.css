@@ -1,0 +1,10 @@
+/* main-content.component.css */
+.main-content {
+  padding: 20px;
+  padding: 90px;
+  margin-left: 250px;
+}
+
+.main-content h1 {
+  margin-top: 0;
+}

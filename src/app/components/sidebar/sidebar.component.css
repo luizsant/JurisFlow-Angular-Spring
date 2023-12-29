@@ -1,0 +1,99 @@
+/* sidebar.component.css */
+.sidebar {
+  height: calc(
+    100vh - 60px
+  ); /* Ajuste para a altura do cabeçalho, se diferente */
+  overflow-y: auto; /* Permite rolagem se o conteúdo exceder a altura */
+  position: fixed;
+  left: 0;
+  top: 60px; /* Posiciona abaixo do cabeçalho */
+  background: rgba(44, 62, 80, 1);
+  color: white;
+  padding-top: 60px;
+  font-weight: bold;
+  transition: width 0.3s ease; /* Transição suave para a largura */
+}
+
+/* Estado recolhido do sidebar */
+.sidebar {
+  width: 60px; /* Largura menor quando recolhido */
+}
+
+/* Estado expandido do sidebar */
+.sidebar.expanded {
+  width: 250px; /* Largura total quando expandido */
+}
+.user-profile {
+  margin-top: 90px;
+  margin-left: 10px;
+  margin-bottom: 30px;
+}
+.user-profile img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.nav-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+.nav-menu li a:hover {
+  background-color: #3c6d9e;
+}
+
+.user-profile,
+.nav-menu {
+  transition: opacity 0.3s ease;
+}
+
+.sidebar:not(.expanded) .user-profile,
+.sidebar:not(.expanded) .nav-menu {
+  opacity: 0;
+  visibility: hidden;
+}
+/* sidebar.component.css */
+/* ... estilos existentes ... */
+
+.toggle-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 30px; /* Largura do botão */
+  height: 25px; /* Altura do botão */
+  margin-left: 15px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; /* Espaçamento uniforme entre as linhas */
+}
+
+.toggle-button span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* Transformações para o estado 'X' */
+.sidebar.expanded .toggle-button span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg); /* Ajusta a posição vertical e rotaciona */
+  transform-origin: 50% 50%; /* Origem da transformação no centro da linha */
+}
+
+.sidebar.expanded .toggle-button span:nth-child(2) {
+  opacity: 0; /* Esconde a linha do meio */
+}
+
+.sidebar.expanded .toggle-button span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg); /* Ajusta a posição vertical e rotaciona na direção oposta */
+  transform-origin: 50% 50%; /* Origem da transformação no centro da linha */
+}
